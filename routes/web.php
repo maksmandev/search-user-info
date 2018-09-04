@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::resource('register', 'RegisterController',['names' => ['index' => 'register']]);
+Route::post('getArea', 'SelectLocationController@getArea');
+Route::resource('users', 'UsersController',['names' => ['index' => 'users']]);
